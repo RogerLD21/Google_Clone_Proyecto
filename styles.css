@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #383a44;
+  color: #ffffff;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.principal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 48px;
+  bottom: 0;
+}
+
+.encabezado {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.encabezado a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.encabezado a:hover {
+  text-decoration: underline;
+}
+
+.apps {
+  font-size: 22px;
+  cursor: pointer;
+  letter-spacing: -2px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #7e57c2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.logo {
+  position: absolute;
+  top: 175px;
+  width: 100%;
+  text-align: center;
+  font-size: 110px;
+  font-weight: 500;
+  letter-spacing: -3px;
+  color: #a9b4e4;
+  font-family: "Product Sans", Arial, sans-serif;
+}
+
+.buscador {
+  position: absolute;
+  top: 342px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 930px;
+  max-width: 90%;
+  height: 68px;
+  background-color: #ffffff;
+  border-radius: 34px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px 0 26px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.buscador .mas {
+  color: #000000;
+  font-size: 28px;
+  margin-right: 18px;
+  cursor: pointer;
+}
+
+.buscador input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  color: #202124;
+  background: transparent;
+}
+
+.buscador input::placeholder {
+  color: #80868b;
+}
+
+.buscador .icono {
+  font-size: 22px;
+  color: #202124;
+  margin: 0 14px;
+  cursor: pointer;
+}
+
+.boton-ia {
+  background-color: #f0f3f8;
+  color: #202124;
+  border: none;
+  border-radius: 22px;
+  height: 44px;
+  padding: 0 18px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.boton-ia:hover {
+  background-color: #e1e6ef;
+}
+
+.sugerencias {
+  position: absolute;
+  top: 431px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 18px;
+}
+
+.tarjeta {
+  width: 300px;
+  height: 70px;
+  background-color: #262932;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 18px;
+  cursor: pointer;
+}
+
+.tarjeta:hover {
+  background-color: #20222a;
+}
+
+.tarjeta .emoji {
+  font-size: 22px;
+}
+
+.tarjeta strong {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.tarjeta span {
+  font-size: 14px;
+  color: #d0d3dc;
+}
+
+.accesos {
+  position: absolute;
+  top: 572px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 40px;
+}
+
+.acceso {
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.acceso .circulo {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  background-color: #262932;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.acceso .circulo:hover {
+  background-color: #20222a;
+}
+
+.acceso .icono-acceso {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.acceso p {
+  font-size: 14px;
+}
+
+.verde {
+  background-color: #1fa11f;
+}
+
+.turquesa {
+  background-color: #14d2d2;
+  color: #004444 !important;
+}
+
+.gris {
+  background-color: #444444;
+}
+
+.blanco {
+  background-color: #ffffff;
+  color: #000000 !important;
+}
+
+.canva {
+  background-color: #00c389;
+  border-radius: 6px !important;
+}
+
+.azul {
+  background-color: #ffffff;
+  color: #1a4bd8 !important;
+}
+
+.personalizar {
+  position: absolute;
+  bottom: 20px;
+  right: 70px;
+  background-color: #2f3a56;
+  color: #ffffff;
+  border: none;
+  border-radius: 24px;
+  height: 40px;
+  padding: 0 22px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.personalizar:hover {
+  background-color: #3a4768;
+}
+
+.barra-lateral {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48px;
+  height: 100vh;
+  background-color: #2c2d3a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 298px;
+  border-left: 1px solid #1f2028;
+}
+
+.barra-lateral .app {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.traductor {
+  background-color: #4a7bd8;
+}
+
+.whatsapp {
+  background-color: #25d366;
+}
+
+.barra-lateral .inferior {
+  position: absolute;
+  bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  font-size: 17px;
+  color: #e0e0e0;
+}
+
+.barra-lateral .inferior span {
+  cursor: pointer;
+}
