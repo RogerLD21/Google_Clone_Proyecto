@@ -8,40 +8,47 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #383a44;
   color: #ffffff;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  padding-right: 48px;
 }
 
-.principal {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 48px;
-  bottom: 0;
+h1,
+h2,
+p {
+  font-weight: normal;
 }
 
-.encabezado {
-  position: absolute;
-  top: 20px;
-  right: 24px;
+ul {
+  list-style: none;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#encabezado {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 24px;
+}
+
+#encabezado ul {
   display: flex;
   align-items: center;
   gap: 18px;
 }
 
-.encabezado a {
-  color: #ffffff;
-  text-decoration: none;
+#encabezado a {
   font-size: 14px;
 }
 
-.encabezado a:hover {
+#encabezado a:hover {
   text-decoration: underline;
 }
 
-.apps {
+#encabezado .apps {
   font-size: 22px;
-  cursor: pointer;
   letter-spacing: -2px;
 }
 
@@ -57,23 +64,22 @@ body {
   cursor: pointer;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 90px;
+}
+
 .logo {
-  position: absolute;
-  top: 175px;
-  width: 100%;
-  text-align: center;
   font-size: 110px;
   font-weight: 500;
   letter-spacing: -3px;
   color: #a9b4e4;
-  font-family: "Product Sans", Arial, sans-serif;
+  margin-bottom: 60px;
 }
 
 .buscador {
-  position: absolute;
-  top: 342px;
-  left: 50%;
-  transform: translateX(-50%);
   width: 930px;
   max-width: 90%;
   height: 68px;
@@ -85,14 +91,19 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
+.buscador button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
 .buscador .mas {
   color: #000000;
   font-size: 28px;
   margin-right: 18px;
-  cursor: pointer;
 }
 
-.buscador input {
+input[type="search"] {
   flex: 1;
   border: none;
   outline: none;
@@ -101,40 +112,33 @@ body {
   background: transparent;
 }
 
-.buscador input::placeholder {
+input[type="search"]::placeholder {
   color: #80868b;
 }
 
 .buscador .icono {
   font-size: 22px;
-  color: #202124;
   margin: 0 14px;
-  cursor: pointer;
 }
 
-.boton-ia {
+.buscador .boton-ia {
   background-color: #f0f3f8;
   color: #202124;
-  border: none;
   border-radius: 22px;
   height: 44px;
   padding: 0 18px;
   font-size: 16px;
   font-weight: bold;
-  cursor: pointer;
 }
 
-.boton-ia:hover {
+.buscador .boton-ia:hover {
   background-color: #e1e6ef;
 }
 
 .sugerencias {
-  position: absolute;
-  top: 431px;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   gap: 18px;
+  margin-top: 21px;
 }
 
 .tarjeta {
@@ -153,37 +157,44 @@ body {
   background-color: #20222a;
 }
 
+.tarjeta + .tarjeta {
+  background-color: #2a2d37;
+}
+
 .tarjeta .emoji {
   font-size: 22px;
 }
 
-.tarjeta strong {
-  display: block;
+.tarjeta h2 {
   font-size: 15px;
+  font-weight: bold;
   margin-bottom: 4px;
 }
 
-.tarjeta span {
+.tarjeta p {
   font-size: 14px;
   color: #d0d3dc;
 }
 
 .accesos {
-  position: absolute;
-  top: 572px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 70px;
+}
+
+.accesos > ul {
   display: flex;
   gap: 40px;
 }
 
-.acceso {
+.accesos li {
   width: 100px;
   text-align: center;
-  cursor: pointer;
 }
 
-.acceso .circulo {
+.accesos a {
+  display: block;
+}
+
+.circulo {
   width: 60px;
   height: 60px;
   margin: 0 auto 14px;
@@ -194,11 +205,11 @@ body {
   justify-content: center;
 }
 
-.acceso .circulo:hover {
+.accesos a:hover .circulo {
   background-color: #20222a;
 }
 
-.acceso .icono-acceso {
+.icono-acceso {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -207,45 +218,102 @@ body {
   justify-content: center;
   font-weight: bold;
   font-size: 16px;
-  color: #ffffff;
 }
 
-.acceso p {
+.nombre {
   font-size: 14px;
 }
 
-.verde {
+.accesos li:nth-child(1) .icono-acceso {
   background-color: #1fa11f;
 }
 
-.turquesa {
+.accesos li:nth-child(2) .icono-acceso {
   background-color: #14d2d2;
-  color: #004444 !important;
+  color: #004444;
 }
 
-.gris {
+.accesos li:nth-child(3) .icono-acceso {
   background-color: #444444;
 }
 
-.blanco {
-  background-color: #ffffff;
-  color: #000000 !important;
+.accesos li:nth-child(4) .icono-acceso {
+  background-color: fuchsia;
+  color: #ffffff;
 }
 
-.canva {
+.accesos li:nth-child(5) .icono-acceso {
   background-color: #00c389;
-  border-radius: 6px !important;
+  border-radius: 6px;
 }
 
-.azul {
+.accesos li:nth-child(6) .icono-acceso {
   background-color: #ffffff;
-  color: #1a4bd8 !important;
+  color: #1a4bd8;
+}
+
+.accesos li:last-child .icono-acceso {
+  background-color: transparent;
+}
+
+.barra-lateral {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 48px;
+  height: 100vh;
+  background-color: #2c2d3a;
+  border-left: 1px solid #1f2028;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 298px 0 14px;
+}
+
+.aplicaciones {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.aplicaciones a {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.aplicaciones a:first-child {
+  background-color: #4a7bd8;
+}
+
+.aplicaciones a:last-child {
+  background-color: #25d366;
+}
+
+.inferior {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  font-size: 17px;
+}
+
+.inferior a {
+  color: #e0e0e0;
+}
+
+#pie {
+  position: fixed;
+  bottom: 20px;
+  right: 70px;
 }
 
 .personalizar {
-  position: absolute;
-  bottom: 20px;
-  right: 70px;
   background-color: #2f3a56;
   color: #ffffff;
   border: none;
@@ -258,53 +326,4 @@ body {
 
 .personalizar:hover {
   background-color: #3a4768;
-}
-
-.barra-lateral {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 48px;
-  height: 100vh;
-  background-color: #2c2d3a;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 298px;
-  border-left: 1px solid #1f2028;
-}
-
-.barra-lateral .app {
-  width: 30px;
-  height: 30px;
-  border-radius: 6px;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.traductor {
-  background-color: #4a7bd8;
-}
-
-.whatsapp {
-  background-color: #25d366;
-}
-
-.barra-lateral .inferior {
-  position: absolute;
-  bottom: 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  align-items: center;
-  font-size: 17px;
-  color: #e0e0e0;
-}
-
-.barra-lateral .inferior span {
-  cursor: pointer;
-}
+}   

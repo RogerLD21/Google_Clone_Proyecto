@@ -8,82 +8,103 @@
 </head>
 <body>
 
-  <div class="principal">
+  <header id="encabezado">
+    <nav>
+      <ul>
+        <li><a href="#">Gmail</a></li>
+        <li><a href="#">Imágenes</a></li>
+        <li><a href="#" class="apps" title="Aplicaciones de Google">⋮⋮⋮</a></li>
+        <li><span class="avatar">R</span></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="encabezado">
-      <a href="#">Gmail</a>
-      <a href="#">Imágenes</a>
-      <span class="apps">⋮⋮⋮</span>
-      <div class="avatar">R</div>
-    </div>
+  <main>
+    <h1 class="logo">Google</h1>
 
-    <div class="logo">Google</div>
+    <form class="buscador" role="search">
+      <button type="button" class="mas">+</button>
+      <input type="search" name="q" placeholder="Pregúntale a Google">
+      <button type="button" class="icono">🎤</button>
+      <button type="button" class="icono">📷</button>
+      <button type="button" class="boton-ia">✦ Modo IA</button>
+    </form>
 
-    <div class="buscador">
-      <span class="mas">+</span>
-      <input type="text" placeholder="Pregúntale a Google">
-      <span class="icono">🎤</span>
-      <span class="icono">📷</span>
-      <button class="boton-ia">✦ Modo IA</button>
-    </div>
-
-    <div class="sugerencias">
-      <div class="tarjeta">
+    <section class="sugerencias">
+      <article class="tarjeta">
         <span class="emoji">🔎</span>
         <div>
-          <strong>Haz más cosas con el Modo IA</strong>
-          <span>Crea, resume y planifica</span>
+          <h2>Haz más cosas con el Modo IA</h2>
+          <p>Crea, resume y planifica</p>
         </div>
-      </div>
-      <div class="tarjeta">
+      </article>
+      <article class="tarjeta">
         <span class="emoji">🍌</span>
         <div>
-          <strong>Crear imágenes</strong>
-          <span>Reimagina, ilustra y edita</span>
+          <h2>Crear imágenes</h2>
+          <p>Reimagina, ilustra y edita</p>
         </div>
-      </div>
-    </div>
+      </article>
+    </section>
 
-    <div class="accesos">
-      <div class="acceso">
-        <div class="circulo"><div class="icono-acceso verde">U</div></div>
-        <p>Aula Virtual UTEL</p>
-      </div>
-      <div class="acceso">
-        <div class="circulo"><div class="icono-acceso turquesa">U</div></div>
-        <p>UCAMP</p>
-      </div>
-      <div class="acceso">
-        <div class="circulo"><div class="icono-acceso gris">S</div></div>
-        <p>SIU UTEL</p>
-      </div>
-      <div class="acceso">
-        <div class="circulo"><div class="icono-acceso canva">▬</div></div>
-        <p>Canva</p>
-      </div>
-      <div class="acceso">
-        <div class="circulo"><div class="icono-acceso azul">i</div></div>
-        <p>Indeed</p>
-      </div>
-      <div class="acceso">
-        <div class="circulo"><div class="icono-acceso">⤢</div></div>
-        <p>Mostrar más</p>
-      </div>
-    </div>
+    <nav class="accesos">
+      <ul>
+        <li>
+          <a href="#">
+            <span class="circulo"><span class="icono-acceso">U</span></span>
+            <span class="nombre">Aula Virtual UTEL</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="circulo"><span class="icono-acceso">U</span></span>
+            <span class="nombre">UCAMP</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="circulo"><span class="icono-acceso">S</span></span>
+            <span class="nombre">SIU UTEL</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="circulo"><span class="icono-acceso">C</span></span>
+            <span class="nombre">Canva</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="circulo"><span class="icono-acceso">i</span></span>
+            <span class="nombre">Indeed</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="circulo"><span class="icono-acceso">⤢</span></span>
+            <span class="nombre">Mostrar más</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </main>
 
-    <button class="personalizar">✎ Personalizar Chrome</button>
-  </div>
+  <aside class="barra-lateral">
+    <nav class="aplicaciones">
+      <a href="#" title="Traductor">G</a>
+      <a href="#" title="WhatsApp">✆</a>
+    </nav>
+    <nav class="inferior">
+      <a href="#" title="Favoritos">♡</a>
+      <a href="#" title="Historial">🕒</a>
+      <a href="#" title="Configuración">⚙</a>
+      <a href="#" title="Más">⋯</a>
+    </nav>
+  </aside>
 
-  <div class="barra-lateral">
-    <div class="app traductor">G</div>
-    <div class="app whatsapp">✆</div>
-    <div class="inferior">
-      <span>♡</span>
-      <span>🕒</span>
-      <span>⚙</span>
-      <span>⋯</span>
-    </div>
-  </div>
+  <footer id="pie">
+    <button type="button" class="personalizar">✎ Personalizar Chrome</button>
+  </footer>
 
 </body>
 </html>
